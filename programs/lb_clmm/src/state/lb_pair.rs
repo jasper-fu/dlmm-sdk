@@ -70,7 +70,7 @@ pub struct ProtocolFee {
     pub amount_y: u64,
 }
 
-#[repr(C, packed)]
+#[repr(C)]
 #[account(zero_copy)]
 #[derive(InitSpace, Debug)]
 pub struct LbPair {

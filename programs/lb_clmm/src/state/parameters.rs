@@ -3,7 +3,7 @@ use crate::instructions::update_fee_parameters::FeeParameter;
 use crate::{errors::LBError, math::safe_math::SafeMath};
 use anchor_lang::prelude::*;
 
-#[repr(C, packed)]
+#[repr(C)]
 #[zero_copy]
 #[derive(InitSpace, Debug)]
 /// Parameter that set by the protocol
@@ -105,7 +105,7 @@ impl Default for StaticParameters {
     }
 }
 
-#[repr(C, packed)]
+#[repr(C)]
 #[zero_copy]
 #[derive(InitSpace, Default, Debug)]
 /// Parameters that changes based on dynamic of the market
